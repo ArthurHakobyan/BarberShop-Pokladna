@@ -34,13 +34,27 @@ function App() {
         barbers={BARBERS}
       />
       {isVisible && (
-        <Person prices={BARBER_SERVICES_PRICES} services={BARBER_SERVICES} barbers={BARBERS[0]} />
+        <Person
+          prices={BARBER_SERVICES_PRICES}
+          services={BARBER_SERVICES}
+          barbers={BARBERS[0]}
+        />
       )}
       {isVisible2 && (
-        <Person prices={BARBER_SERVICES_PRICES} services={BARBER_SERVICES} barbers={BARBERS[1]} />
-      
+        <Person
+          prices={BARBER_SERVICES_PRICES}
+          services={BARBER_SERVICES}
+          barbers={BARBERS[1]}
+        />
       )}
 
+      {isVisible2 && (
+        <Person
+          prices={BARBER_SERVICES_PRICES}
+          services={BARBER_SERVICES}
+          barbers={BARBERS[2]}
+        />
+      )}
     </div>
   );
 }
