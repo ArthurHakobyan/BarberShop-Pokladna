@@ -18,6 +18,7 @@ function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible4, setIsVisible4] = useState(false);
 
   const showFirstPerson = () => {
     setIsVisible(!isVisible);
@@ -31,12 +32,17 @@ function App() {
     setIsVisible3(!isVisible3);
   };
 
+  const showFourthPerson = () => {
+    setIsVisible4(!isVisible4);
+  };
+
   return (
     <div>
       <PersonSelector
         onClickFirst={showFirstPerson}
         onClickSecond={showSecondPerson}
         onClickThird={showThirdPerson}
+        onClickFourth={showFourthPerson}
         barbers={BARBERS}
       />
       {isVisible && (
@@ -59,6 +65,14 @@ function App() {
           prices={BARBER_SERVICES_PRICES}
           services={BARBER_SERVICES}
           barbers={BARBERS[2]}
+        />
+      )}
+
+      {isVisible4 && (
+        <Person
+          prices={BARBER_SERVICES_PRICES}
+          services={BARBER_SERVICES}
+          barbers={BARBERS[3]}
         />
       )}
     </div>

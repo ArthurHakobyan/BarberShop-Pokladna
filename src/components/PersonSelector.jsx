@@ -22,6 +22,12 @@ const PersonSelector = (props) => {
       >
         {props.barbers[2]}
       </button>
+      <button
+        onClick={props.onClickFourth}
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded m-3 active:bg-green-800"
+      >
+        {props.barbers[3]}
+      </button>
     </div>
   );
 };
